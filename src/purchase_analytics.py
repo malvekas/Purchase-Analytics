@@ -31,7 +31,7 @@ class order:
         with open(filename,mode="w") as f:
             f.write("department_id,number_of_orders,number_of_first_orders,percentage\n")
             for i in sorted(self.dept_order.keys()):
-                f.write("%s,%s,%s,%s\n"%(i,self.dept_order[i],self.dept_reorder[i],format(self.dept_reorder[i]/self.dept_order[i],'.2f')))
+                f.write("%s,%s,%s,%s\n"%(i,self.dept_order[i],self.dept_reorder[i],format((self.dept_reorder[i]*1.0)/self.dept_order[i],'.2f')))
                 
 
 def main(argv):
